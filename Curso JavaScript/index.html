@@ -5,41 +5,10 @@
 </head>
 <body>
     <script>
-        //AND, OR, NOT
+        var sexo = 'M';
 
-        var sexo = 'M', idade = 23;
-
-            //AND
-        if (sexo === 'M' && idade >= 18) {
-            console.log('OK, and');
-        }
-            //OR
-        if (sexo === 'M' || idade >= 18) {
-            console.log('OK, or');
-        }
-            //NOT - != verifica apenas o valor da variável & !== verifica o valor e o tipo da variável 
-        sexo = 'F'; //atribuo valor diferente de 'M'
-
-        if (sexo !== 'M') {
-            console.log('OK, not');
-        }
-        
-        /*--------------------------------------------------------------------*/
-
-        var masculino;
-
-        if (sexo === 'M') {
-            masculino = true;
-        } else {
-            masculino = false;
-        }
-
-        // OU
-        
-        var feminino = sexo === 'F';
-
-        console.log('masculino =',masculino);
-        console.log('feminino = ',feminino);
+        var retorno = (sexo === 'M') ? 'Masculino' : 'Feminino'
+        console.log(retorno);
     </script>
 </body>
 </html>
