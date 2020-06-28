@@ -5,18 +5,13 @@
 </head>
 <body>
     <script>
-        //for - sempre que souber o tamanho do intervalo, while - quando não sabemos quantas vezes o fluxo será executado
-
-        for (var i = 0; i <= 10; i++) {
-            console.log('i =', i);
+        function exibeAlgo() {
+            console.log('Hello, World!');
         }
 
-        var j = 0;
-        while (j <= 10) {
-            console.log('j =', j);
-
-            j++;
-        }
+        setInterval(exibeAlgo(), 1000); //Com os '()' estou executando a função
+        setInterval(exibeAlgo, 1000); //Sem os '()' estou referenciando a função
+        setTimeout(exibeAlgo, 5000) //executa apenas uma vez, porém configuramos o delay
     </script>
 </body>
 </html>
