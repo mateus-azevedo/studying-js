@@ -5,28 +5,22 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" name="nome" id="nome" class="nome">
-        <!-- <input type="text" name="nome" id="uau" class="nome"> -->
-        <button class="botao">Adicionar</button>
+        <input type="text" id="nome">
     </div>
 
     <script>
-       var inputElement = document.getElementById('nome'); // o ID é sempre unico
-       inputElement = document.getElementsByClassName('nome'); // a CLASS ela não é única
-       inputElement = document.getElementsByTagName('input'); //sempre retorna um vetor. se quisermos um específico => document.getElementsByTagName('input')[i]
-       inputElement = document.querySelector('div#app input'); //sempre retorna um unico elemento
-       inputElement = document.querySelectorAll('input'); //retorna todos elementos
+       var linkElement = document.createElement('a');
+       linkElement.setAttribute('href', 'http://rocketseat.com.br');
+       linkElement.setAttribute('title', 'Site da Rocketseat');
 
-       inputElement = document.querySelector('input[type=text');
-       var btnElement = document.querySelector('button.botao');
+       var textElement = document.createTextNode('Acessar site da RocketSeat');
+       linkElement.appendChild(textElement);
 
-       btnElement.onclick = function() {
-           var text = inputElement.value;
-           
-           alert(text);
-       }
+       var containerElement = document.querySelector('#app');
+       containerElement.appendChild(linkElement);
 
-       console.log(inputElement);
+       var inputElement = document.querySelector('#nome');
+       containerElement.removeChild(inputElement);
     </script>
 </body>
 </html>
