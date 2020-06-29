@@ -5,20 +5,16 @@
 </head>
 <body>
     <script>
-        var endereco = {
-            rua: 'Rua dos Pinheiros',
-            numero: 1293,
-            bairro: 'Centro',
-            cidade: 'São Paulo',
-            uf: 'SP'
-        };
+        function pares(x, y) {
+            var i, par = 0;
 
-        function resultado() {
-            console.log('O usuário mora em', endereco.cidade, '/', endereco.uf,', no bairro', endereco.bairro, 'na rua ,', endereco.rua, 'com n°',endereco.numero);
+            for (i = x; i <= y; i++) {
+                if (i % 2 == 0) 
+                    console.log(i);
+            }
         }
 
-        resultado(endereco);
-
+        pares(32, 321);
     </script>
 </body>
 </html>
