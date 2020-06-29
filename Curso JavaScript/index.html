@@ -5,15 +5,20 @@
 </head>
 <body>
     <script>
-        function temHabilidade(skills) {
-            for (var i = 0; i < 3; i++) {
-                (skills[i] == 'Javascript') ? console.log(true) : console.log(false);
-                if (skills[i] == 'Javascript') break;
+        function experiencia(anos) {
+            if (anos < 2) {
+                console.log('Iniciante');
+            } else if (anos < 4) {
+                console.log('Intermediário');
+            } else if (anos < 7) {
+                console.log('Avançado');
+            } else {
+                console.log('Jedi Master');
             }
         }
 
-        var skills = ['ReactJS', 'React Native', 'Javascript'];
-        temHabilidade(skills); //true or false
+        var anosEstudo = 7;
+        experiencia(anosEstudo);
     </script>
 </body>
 </html>
