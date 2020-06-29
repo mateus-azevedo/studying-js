@@ -5,14 +5,28 @@
 </head>
 <body>
     <div id="app">
-        <button onclick="mostraAlerta()">Me Pressione</button>
-        <input onkeypress="mostraAlerta()">
+        <input type="text" name="nome" id="nome" class="nome">
+        <!-- <input type="text" name="nome" id="uau" class="nome"> -->
+        <button class="botao">Adicionar</button>
     </div>
 
     <script>
-       function mostraAlerta() {
-           alert('Botão foi clicado');
+       var inputElement = document.getElementById('nome'); // o ID é sempre unico
+       inputElement = document.getElementsByClassName('nome'); // a CLASS ela não é única
+       inputElement = document.getElementsByTagName('input'); //sempre retorna um vetor. se quisermos um específico => document.getElementsByTagName('input')[i]
+       inputElement = document.querySelector('div#app input'); //sempre retorna um unico elemento
+       inputElement = document.querySelectorAll('input'); //retorna todos elementos
+
+       inputElement = document.querySelector('input[type=text');
+       var btnElement = document.querySelector('button.botao');
+
+       btnElement.onclick = function() {
+           var text = inputElement.value;
+           
+           alert(text);
        }
+
+       console.log(inputElement);
     </script>
 </body>
 </html>
