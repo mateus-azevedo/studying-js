@@ -5,16 +5,15 @@
 </head>
 <body>
     <script>
-        function pares(x, y) {
-            var i, par = 0;
-
-            for (i = x; i <= y; i++) {
-                if (i % 2 == 0) 
-                    console.log(i);
+        function temHabilidade(skills) {
+            for (var i = 0; i < 3; i++) {
+                (skills[i] == 'Javascript') ? console.log(true) : console.log(false);
+                if (skills[i] == 'Javascript') break;
             }
         }
 
-        pares(32, 321);
+        var skills = ['ReactJS', 'React Native', 'Javascript'];
+        temHabilidade(skills); //true or false
     </script>
 </body>
 </html>
