@@ -5,13 +5,20 @@
 </head>
 <body>
     <script>
-        function exibeAlgo() {
-            console.log('Hello, World!');
+        var endereco = {
+            rua: 'Rua dos Pinheiros',
+            numero: 1293,
+            bairro: 'Centro',
+            cidade: 'São Paulo',
+            uf: 'SP'
+        };
+
+        function resultado() {
+            console.log('O usuário mora em', endereco.cidade, '/', endereco.uf,', no bairro', endereco.bairro, 'na rua ,', endereco.rua, 'com n°',endereco.numero);
         }
 
-        setInterval(exibeAlgo(), 1000); //Com os '()' estou executando a função
-        setInterval(exibeAlgo, 1000); //Sem os '()' estou referenciando a função
-        setTimeout(exibeAlgo, 5000) //executa apenas uma vez, porém configuramos o delay
+        resultado(endereco);
+
     </script>
 </body>
 </html>
