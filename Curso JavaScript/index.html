@@ -4,25 +4,15 @@
     <title>Curso Javascript</title>
 </head>
 <body>
+    <div id="app">
+        <button onclick="mostraAlerta()">Me Pressione</button>
+        <input onkeypress="mostraAlerta()">
+    </div>
+
     <script>
-        var usuarios = [
-            {
-                nome: 'Mateus',
-                habilidades: ['Javascript', 'ReactJS', 'Redux']
-            },
-            {
-                nome: 'Marcelo',
-                habilidades: ['VueJS', 'Ruby on Rails', 'Elixir']
-            }
-        ];
-
-        function resultado(user) {
-            for (let value of user) {
-                console.log('O',value.nome,'possui as habilidades:',value.habilidades.join(', '));
-            }
-        }
-
-        resultado(usuarios);
+       function mostraAlerta() {
+           alert('Botão foi clicado');
+       }
     </script>
 </body>
 </html>
